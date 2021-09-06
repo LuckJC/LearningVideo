@@ -59,9 +59,9 @@ set_target_properties( avformat
 add_library( avdevice
         SHARED
         IMPORTED)
-set_target_properties( avdevice
-        PROPERTIES IMPORTED_LOCATION
-        ${ffmpeg_lib_dir}/libavdevice.so )
+#set_target_properties( avdevice
+#        PROPERTIES IMPORTED_LOCATION
+#        ${ffmpeg_lib_dir}/libavdevice.so )
 
 add_library( h264
         SHARED
@@ -161,7 +161,7 @@ target_link_libraries(
         avfilter
         swscale
         avformat
-        avdevice
+        #avdevice
         h264
 
         -landroid
